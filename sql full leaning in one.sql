@@ -50,9 +50,44 @@ select * from students ;
 
 
 
+#datatype
+
+show tables;
+
+create table coustomer (id int ,name varchar(100)); 
+desc coustomer;
+
+insert into coustomer( id , name)values(101,"rahul");
+insert into coustomer( id )values(102);
+
+select * from coustomer;
+
+insert into coustomer values(null,null);
+
+
+create table coustomer1( id int not null, name varchar(100) not null);
+insert into coustomer1( id )values(102);
+insert into coustomer1 values(101,null);
 
 
 
 
+create table coustomer2(id int , name varchar(100));
 
 
+ALTER TABLE coustomer2
+ADD COLUMN acc_type varchar(20);
+insert into coustomer2 (id,name,acc_type) values (101,"anaya","savings"),(102,"taya","savings");
+insert into coustomer2 (id,name) values (103,"piaya");
+select * from coustomer2 ;
+
+
+create table coustomer3(id int not null , name varchar(100) not null , accu_type varchar(50) not null 
+default 'savings');
+desc coustomer3 ;
+insert into coustomer3(id,name) values (101,"peter"),(102,"cheter"),(103,"nuton");
+select * from coustomer3 ;
+
+
+
+#primary key 
